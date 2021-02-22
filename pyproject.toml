@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "flax_addons"
+version = "0.1.0"
+description = "flax addons"
+authors = ["machineko"]
+
+readme = 'README.md'
+repository = "https://github.com/machineko/flax-addons"
+homepage = "https://github.com/machineko/flax-addons"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+librosa = "^0.8.0"
+numpy = "^1.2.0"
+jaxlib = "^0.1.61"
+jax = "^0.2.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pytest-benchmark = "^3.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 90
+target-version = ['py38']
