@@ -29,7 +29,7 @@ def pad_center(data: jnp.ndarray, size: int, axis=-1, **kwargs) -> jnp.ndarray:
     It is modified copy of librosa pad_center transformed to work with jax
     Warning this is pure function
     https://github.com/librosa/librosa
-    
+
     Wrapper for jnp.pad to automatically center an array prior to padding.
 
     Parameters
@@ -240,7 +240,7 @@ def inverse_stft_gpu(
     y, win_sum = np.asarray(y), np.asarray(win_sum)
     approx_nonzero_indices = win_sum != 0.0
     y[approx_nonzero_indices] /= win_sum[approx_nonzero_indices]
-    return y[int(n_fft // 2): -int(n_fft // 2)]
+    return y[int(n_fft // 2) : -int(n_fft // 2)]
 
 
 def create_mask_from_lens(
